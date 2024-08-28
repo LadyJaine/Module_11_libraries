@@ -1,6 +1,7 @@
-#https://httpbin.org/
-#https://smartiqa.ru/blog/python-requests
 import requests
+import numpy as np
+import pandas as pd
+import openpyxl
 mesto = 'https://mail.ru/'
 request_1 = requests.get(mesto)
 print(request_1)
@@ -15,22 +16,14 @@ response = requests.options('https://mail.ru/')
 print(response)
 print(request_1.headers)
 
-# https://blog.skillfactory.ru/kak-nachat-analizirovat-dannye-v-pandas-pervye-shagi/
-# https://blog.skillfactory.ru/chto-takoe-google-colaboratory-i-komu-on-nuzhen/
-# https://blog.skillfactory.ru/chto-takoe-google-colaboratory-i-komu-on-nuzhen/
-# https://smysl.io/blog/pandas/#%D0%A7%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-Pandas-%D0%B8-%D0%B7%D0%B0%D1%87%D0%B5%
-# D0%BC-%D0%BE%D0%BD-%D0%BD%D1%83%D0%B6%D0%B5%D0%BD
-import numpy as np
-import pandas as pd
-import openpyxl
 df = pd.read_csv('post2.csv', sep='\t')
 print(df)
 print()
 print(f'первые 6 строк {df.head()}')
 print()
-print(f"размер таблицы {df.shape}")     #покажет размеры сразу по двум осям df.shape[0]
+print(f"размер таблицы {df.shape}")          #покажет размеры сразу по двум осям df.shape[0]
 print()
-print(f"количество строк {df.shape[0]}") #размер по горизонтали - то есть количество строк
+print(f"количество строк {df.shape[0]}")     #размер по горизонтали - то есть количество строк
 print(f"количество столбцов {df.shape[1]}")  #размер по горизонтали - то есть количество столбцов
 print()
 print(df.columns)
@@ -40,7 +33,7 @@ print(df1)
 print()
 print(f'первые 6 строк {df1.head()}')
 print()
-print(f"размер таблицы {df1.shape}")     #покажет размеры сразу по двум осям df.shape[0] #размер по горизонтали - то есть количество строк
+print(f"размер таблицы {df1.shape}")          #покажет размеры сразу по двум осям df.shape[0] 
 print()
 print(f"количество столбцов {df1.shape[1]}")  #размер по горизонтали - то есть количество столбцов
 print()
